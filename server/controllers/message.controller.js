@@ -51,10 +51,6 @@ export const getMessages = async (req, res) => {
         }).populate("messages")
 
         if (!conversation) {
-            return res.status(404).json({ error: "No se encontraron mensajes" })
-        }
-
-        if (!conversation) {
             return res.status(200).json([])
         }
 
